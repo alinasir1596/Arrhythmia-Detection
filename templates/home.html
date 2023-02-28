@@ -1,0 +1,101 @@
+
+<style>
+	html,body{
+		background-color: black;
+	}
+	.p1{
+		font-family: cursive;
+		line-height: 33px;
+		/*background-color: black; 	*/
+		border: 2px solid;
+		text-align: justify;
+		color: white;
+		padding: 10px;
+		margin: 40px;
+		margin-top: 50px;
+	}
+	table, th, td {
+  		border:1px solid black;
+  		border-color: white;
+  		border-collapse: collapse;
+	}
+	.nav1{
+		font-size: 20px;
+		font-family: sans-serif;
+		color: darkblue;
+		background-color: black;
+		width: 100%;
+		margin-right: 80px;
+		padding: 20px;
+	}
+	.dist{
+		margin-left: 40px;
+	}
+	.center {
+  		align-items: center; 
+  		margin:70px 100px;
+  		color: white;
+	}
+</style>
+<title>ECG - Image based classification for Arrhythmia</title>
+<head>
+	<nav class="nav1">
+		<a class="dist" href="home.html">Home</a>
+		<a class="dist" href="info.html">Information</a>
+		<a class="dist" href="upload.html">Predict Image</a>
+	</nav>
+</head>
+<body style="background-color:black;">
+<div><h1 style="color:yellow; text-align:justify;font-style:italic; margin: 40px;text-decoration: underline;">Ecg- Image Based Heartbeat Classification For Arrhythmia Detection</h1></div>
+<div class="p1" style="line-height:44px;">According to the World Health Organization (WHO), cardiovascular diseases (CVDs) are the number one cause of death today. Over 17.7 million people died from CVDs in the year 2017 all over the world which is about 31% of all deaths, and over 75% of these deaths occur in low and middle-income countries. Arrhythmia is a representative type of CVD that refers to any irregular change from the normal heart rhythms. There are several types of arrhythmia including atrial fibrillation, premature contraction, ventricular fibrillation, and tachycardia. Although a single arrhythmia heartbeat may not have a serious impact on life, continuous arrhythmia beats can result in fatal circumstances. In this project, we build an effective electrocardiogram (ECG) arrhythmia classification method using a convolutional neural network (CNN), in which we classify ECG into seven categories, one being normal and the other six being different types of arrhythmia using deep two-dimensional CNN with grayscale ECG images. We are creating a web application where the user selects the image which is to be classified. The image is fed into the model that is trained and the cited class will be displayed in the results.</div>
+<div class="center"><img src="../static/Cardiac-Cycle.jpg" height="400px" width="100%"></div>
+<div class="center"><article style="line-height: 30px; text-align: justify; font-size: 25px;">
+	<h1 style="font-style: italic; color:yellow; text-decoration: underline; text-decoration-color:white;">A NORMAL ECG</h1> The heart is beating in a regular sinus rhythm
+	between 60 - 100 beats per minute (specifically 82 bpm). All the important intervals on this recording are within normal ranges.<br>
+</article></div>
+<table style="height: 20%; width:90%; line-height: 44px; margin:auto; color:white; ">
+	<tr>
+		<th style="font-size:30px;">Index</th>
+		<th style="font-size:30px;">Wave Name</th>
+		<th style="width:70%; font-size:30px;">Description</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>&nbsp P wave:</td>
+		<td style="text-align:justify; margin:auto;">&nbsp Normal duration of less than or equal to 0.11 seconds.<br> &nbsp Polarity is positive in leads I, II, aVF and V4 - V6; diphasic in leads V1 and V3;negative in aVR.<br> &nbsp Shape is generally smooth, not notched or peaked.<br></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>&nbsp PR interval:</td>
+		<td style="text-align:justify; margin:auto; padding: auto;">&nbsp Normally between 0.12 and 0.20 seconds.</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>&nbsp QRS complex:</td>
+		<td style="text-align:justify; margin:auto; padding: auto;"><br>
+			&nbsp Duration less than or equal to 0.12 seconds, amplitude greater than 0.5 mV in at least one
+			standard lead, and greater &nbsp than 1.0 mV in at least one precordial lead.
+			Upper limit of normal amplitude is 2.5 - 3.0 mV.<br><br>
+
+			&nbsp In general, proceeding from V1 to V6, the R waves get taller while the S waves get smaller.
+			At V3 or V4, these &nbsp waves are usually equal. This is called the transitional zone.<br></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>&nbsp ST segment: </td>
+		<td style="text-align:justify; margin:auto; padding: auto;">&nbsp Isoelectric, slanting upwards to the T wave in the normal ECG.</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>&nbsp T wave:</td>
+		<td style="text-align:justify; margin:auto; padding: auto;"><br>&nbsp T wave deflection should be in the same direction as the QRS complex in at least 5 of the 6 limb leads.<br>
+			&nbsp Normally rounded and asymmetrical, with a more gradual ascent than descent.<br>
+			&nbsp Isolated T wave inversion in an asymptomatic adult is generally a normal variant</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>&nbsp QT interval:</td>
+		<td style="text-align:justify; margin:auto; padding: auto;">&nbsp Durations normally less than or equal to 0.40 seconds for males and 0.44 seconds for females.</td>
+	</tr>
+</table>
+</body>
